@@ -1,3 +1,5 @@
+> **Boss fight agent prompt / 生成 Boss 战的 Agent Prompt：[docs/boss_fight_agent_prompt.md](docs/boss_fight_agent_prompt.md)**
+
 # 犀渠 · 枯林之主 / Grendel · Lord of the Withered Wood
 
 一个 3D 动作 Boss 战 Demo（Godot 4.5.1，GDScript）。双刀主角在枯林深处的巢穴里单挑狼人 Boss「犀渠」。Boss 的四种招式节奏各不相同，主要输出靠弹反、完美闪避和跳跃躲招后的反击。
