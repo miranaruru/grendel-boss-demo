@@ -1,0 +1,11 @@
+Model Information:
+* title:	70 Stylized Rocks
+* source:	https://sketchfab.com/3d-models/70-stylized-rocks-bf0051544c9c41f998c154c546b09669
+* author:	OndyRen (https://sketchfab.com/saurondra)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "70 Stylized Rocks" (https://sketchfab.com/3d-models/70-stylized-rocks-bf0051544c9c41f998c154c546b09669) by OndyRen (https://sketchfab.com/saurondra) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

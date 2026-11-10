@@ -1,0 +1,11 @@
+Model Information:
+* title:	Spooky Tree
+* source:	https://sketchfab.com/3d-models/spooky-tree-3f050640e5d245ccb458aa5184f241e7
+* author:	Marissa Menlove (https://sketchfab.com/rissymenlove)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Spooky Tree" (https://sketchfab.com/3d-models/spooky-tree-3f050640e5d245ccb458aa5184f241e7) by Marissa Menlove (https://sketchfab.com/rissymenlove) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

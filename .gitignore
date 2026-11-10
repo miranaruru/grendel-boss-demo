@@ -1,0 +1,13 @@
+# Godot 缓存（打开项目会重新生成）
+.godot/
+# macOS
+.DS_Store
+# 下载来的原始动画包（游戏用的是 assets/ual2 里复制过来的那份；原包留在本地，不进仓库）
+/Universal Animation Library[[]Standard]/
+/Universal Animation Library 2[[]Standard]/
+# 临时测试脚本
+_tmp_driver.*
+_shots/
+# 截图输出 / 原始素材压缩包
+screenshots/
+*.zip

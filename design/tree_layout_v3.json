@@ -1,0 +1,946 @@
+{
+ "plan": "v3",
+ "units": "meters; x=east, z=south (Godot -Z = north)",
+ "platform_radius": 12,
+ "play_radius": 26,
+ "player_spawn": [
+  0,
+  7
+ ],
+ "boss_spawn": [
+  0,
+  -4
+ ],
+ "size_scale": {
+  "S": 0.7,
+  "M": 1.0,
+  "L": 1.4,
+  "XL": 2.4
+ },
+ "trees": [
+  {
+   "id": "N1",
+   "zone": "N",
+   "x": -16.0,
+   "z": -14.0,
+   "size": "L",
+   "model": "old_tree"
+  },
+  {
+   "id": "N2",
+   "zone": "N",
+   "x": -18.5,
+   "z": -16.5,
+   "size": "M",
+   "model": "old_tree"
+  },
+  {
+   "id": "N3",
+   "zone": "N",
+   "x": -15.0,
+   "z": -17.5,
+   "size": "S",
+   "model": "old_tree"
+  },
+  {
+   "id": "N4",
+   "zone": "N",
+   "x": -19.5,
+   "z": -13.0,
+   "size": "S",
+   "model": "old_tree"
+  },
+  {
+   "id": "E1",
+   "zone": "E",
+   "x": 16.0,
+   "z": -14.0,
+   "size": "L",
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "E2",
+   "zone": "E",
+   "x": 18.5,
+   "z": -16.5,
+   "size": "M",
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "E3",
+   "zone": "E",
+   "x": 19.5,
+   "z": -13.0,
+   "size": "S",
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "W1",
+   "zone": "W",
+   "x": -20.0,
+   "z": 1.0,
+   "size": "L",
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "W2",
+   "zone": "W",
+   "x": -21.5,
+   "z": 4.0,
+   "size": "M",
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "W3",
+   "zone": "W",
+   "x": -19.0,
+   "z": 4.5,
+   "size": "S",
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "D1",
+   "zone": "D",
+   "x": 20.5,
+   "z": -1.0,
+   "size": "L",
+   "model": "spooky_tree",
+   "leaning": true
+  },
+  {
+   "id": "D2",
+   "zone": "D",
+   "x": 22.5,
+   "z": 2.5,
+   "size": "S",
+   "model": "dead_trees"
+  },
+  {
+   "id": "S1",
+   "zone": "S",
+   "x": -16.5,
+   "z": 16.5,
+   "size": "M",
+   "model": "dead_trees"
+  },
+  {
+   "id": "S2",
+   "zone": "S",
+   "x": -18.5,
+   "z": 18.5,
+   "size": "S",
+   "model": "dead_trees"
+  },
+  {
+   "id": "K1",
+   "zone": "T",
+   "x": 16.5,
+   "z": 16.5,
+   "size": "M",
+   "model": "dead_trees"
+  },
+  {
+   "id": "K2",
+   "zone": "T",
+   "x": 18.5,
+   "z": 18.5,
+   "size": "S",
+   "model": "dead_trees"
+  },
+  {
+   "id": "F00",
+   "zone": "far",
+   "x": -37.5,
+   "z": 11.6,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F01",
+   "zone": "far",
+   "x": -43.1,
+   "z": 13.4,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F02",
+   "zone": "far",
+   "x": 15.3,
+   "z": 35.1,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F03",
+   "zone": "far",
+   "x": 15.3,
+   "z": -39.0,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F04",
+   "zone": "far",
+   "x": -29.7,
+   "z": -20.3,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F05",
+   "zone": "far",
+   "x": -22.9,
+   "z": -33.2,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F06",
+   "zone": "far",
+   "x": -31.9,
+   "z": -31.2,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F07",
+   "zone": "far",
+   "x": 36.6,
+   "z": 7.0,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F08",
+   "zone": "far",
+   "x": -26.8,
+   "z": -17.3,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F09",
+   "zone": "far",
+   "x": -24.2,
+   "z": -29.3,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F10",
+   "zone": "far",
+   "x": -32.4,
+   "z": 8.9,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F11",
+   "zone": "far",
+   "x": -9.0,
+   "z": -33.1,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F12",
+   "zone": "far",
+   "x": -28.5,
+   "z": -2.3,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F13",
+   "zone": "far",
+   "x": 43.4,
+   "z": -11.7,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F14",
+   "zone": "far",
+   "x": -29.2,
+   "z": -12.9,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F15",
+   "zone": "far",
+   "x": -7.5,
+   "z": -27.2,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F16",
+   "zone": "far",
+   "x": 9.2,
+   "z": -30.2,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F17",
+   "zone": "far",
+   "x": 43.3,
+   "z": -8.0,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F18",
+   "zone": "far",
+   "x": 28.4,
+   "z": -0.4,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F19",
+   "zone": "far",
+   "x": -35.5,
+   "z": 27.8,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F20",
+   "zone": "far",
+   "x": 29.9,
+   "z": 8.1,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F21",
+   "zone": "far",
+   "x": -39.3,
+   "z": 4.0,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F22",
+   "zone": "far",
+   "x": 12.7,
+   "z": 28.4,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F23",
+   "zone": "far",
+   "x": -4.8,
+   "z": -30.8,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F24",
+   "zone": "far",
+   "x": -13.8,
+   "z": -33.0,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F25",
+   "zone": "far",
+   "x": 22.9,
+   "z": 17.5,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F26",
+   "zone": "far",
+   "x": -2.3,
+   "z": -35.8,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F27",
+   "zone": "far",
+   "x": 17.8,
+   "z": -35.7,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F28",
+   "zone": "far",
+   "x": -46.2,
+   "z": -5.9,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F29",
+   "zone": "far",
+   "x": 26.3,
+   "z": 26.8,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F30",
+   "zone": "far",
+   "x": 33.2,
+   "z": 3.5,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F31",
+   "zone": "far",
+   "x": -46.6,
+   "z": -9.2,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F32",
+   "zone": "far",
+   "x": -29.7,
+   "z": 34.9,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F33",
+   "zone": "far",
+   "x": -39.3,
+   "z": -24.9,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F34",
+   "zone": "far",
+   "x": 35.5,
+   "z": -22.5,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F35",
+   "zone": "far",
+   "x": 40.4,
+   "z": 5.4,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F36",
+   "zone": "far",
+   "x": 44.9,
+   "z": 12.9,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F37",
+   "zone": "far",
+   "x": 12.4,
+   "z": -44.6,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F38",
+   "zone": "far",
+   "x": 29.3,
+   "z": -36.6,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F39",
+   "zone": "far",
+   "x": 25.8,
+   "z": -29.8,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F40",
+   "zone": "far",
+   "x": -29.9,
+   "z": 17.4,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F42",
+   "zone": "far",
+   "x": -32.4,
+   "z": 3.9,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F43",
+   "zone": "far",
+   "x": -40.3,
+   "z": 0.7,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F44",
+   "zone": "far",
+   "x": -14.0,
+   "z": -28.8,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F45",
+   "zone": "far",
+   "x": 0.8,
+   "z": -34.8,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F46",
+   "zone": "far",
+   "x": -32.8,
+   "z": 0.3,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F47",
+   "zone": "far",
+   "x": -40.0,
+   "z": 18.6,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F48",
+   "zone": "far",
+   "x": 24.5,
+   "z": -34.4,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F49",
+   "zone": "far",
+   "x": 13.2,
+   "z": -27.2,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F50",
+   "zone": "far",
+   "x": -26.7,
+   "z": -26.9,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F51",
+   "zone": "far",
+   "x": -9.4,
+   "z": -43.8,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F52",
+   "zone": "far",
+   "x": -32.4,
+   "z": -26.0,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F53",
+   "zone": "far",
+   "x": 7.3,
+   "z": -27.4,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F54",
+   "zone": "far",
+   "x": -26.3,
+   "z": 17.8,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F55",
+   "zone": "far",
+   "x": -28.1,
+   "z": -30.0,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F56",
+   "zone": "far",
+   "x": 40.3,
+   "z": -10.8,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F57",
+   "zone": "far",
+   "x": -28.0,
+   "z": -6.2,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F58",
+   "zone": "far",
+   "x": -4.9,
+   "z": 34.6,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F59",
+   "zone": "far",
+   "x": 39.8,
+   "z": 24.3,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F60",
+   "zone": "far",
+   "x": 39.0,
+   "z": 1.6,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F61",
+   "zone": "far",
+   "x": -40.0,
+   "z": 9.3,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F62",
+   "zone": "far",
+   "x": 36.8,
+   "z": 26.4,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F63",
+   "zone": "far",
+   "x": 10.5,
+   "z": 44.8,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F64",
+   "zone": "far",
+   "x": -42.6,
+   "z": -10.1,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F65",
+   "zone": "far",
+   "x": 28.3,
+   "z": -15.6,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F66",
+   "zone": "far",
+   "x": -25.9,
+   "z": 12.4,
+   "size": "L",
+   "far": true,
+   "model": "dead_trees_demo"
+  },
+  {
+   "id": "F67",
+   "zone": "far",
+   "x": -47.2,
+   "z": 8.8,
+   "size": "XL",
+   "far": true,
+   "model": "dead_trees"
+  },
+  {
+   "id": "F68",
+   "zone": "far",
+   "x": 35.7,
+   "z": -12.7,
+   "size": "M",
+   "far": true,
+   "model": "dead_trees_demo"
+  }
+ ],
+ "logs": [
+  {
+   "id": "L1",
+   "x": -20,
+   "z": 10,
+   "rot_deg": -30,
+   "length_m": 6
+  },
+  {
+   "id": "L2",
+   "x": 22,
+   "z": 9,
+   "rot_deg": 25,
+   "length_m": 6
+  }
+ ],
+ "stumps": [
+  {
+   "id": "T1",
+   "x": -11,
+   "z": -14
+  },
+  {
+   "id": "T2",
+   "x": -21,
+   "z": 0
+  },
+  {
+   "id": "T3",
+   "x": -18,
+   "z": -7
+  }
+ ],
+ "props": [
+  {
+   "model": "ruined_stone_bridge_broken_arch",
+   "x": 0.0,
+   "z": -20.0,
+   "face_center": true,
+   "width": 11.0,
+   "breakable_arch": true,
+   "note": "拱门"
+  },
+  {
+   "model": "the_ancient_gnarled_tree_3d_model_free",
+   "x": 0.0,
+   "z": -30.0,
+   "rot_deg": 40,
+   "height": 13.0,
+   "note": "王座古树（远景）"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": -8.0,
+   "z": -10.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯1"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": 8.0,
+   "z": -10.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯2"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": -4.0,
+   "z": -18.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯3"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": 4.0,
+   "z": -18.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯4"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": -12.0,
+   "z": 2.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯5"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": 12.0,
+   "z": 2.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯6"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": -6.0,
+   "z": 12.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯7"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": 6.0,
+   "z": 12.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯8"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": -22.0,
+   "z": -6.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯9"
+  },
+  {
+   "model": "japanese_stone_lantern_scan_2",
+   "x": 22.0,
+   "z": -8.0,
+   "face_center": true,
+   "height": 2.1,
+   "lamp": true,
+   "note": "石灯10"
+  },
+  {
+   "model": "moss_covered_rock_pile",
+   "x": -27.0,
+   "z": -12.0,
+   "rot_deg": 30,
+   "height": 2.4,
+   "note": "西北乱石堆"
+  },
+  {
+   "model": "moss_covered_rock_pile",
+   "x": 29.0,
+   "z": 13.0,
+   "rot_deg": -50,
+   "height": 1.9,
+   "note": "东乱石堆"
+  },
+  {
+   "model": "rock_formation_scan_2",
+   "x": -31.0,
+   "z": 15.0,
+   "rot_deg": 80,
+   "height": 1.2,
+   "note": "西侧长条岩"
+  },
+  {
+   "model": "rock_formation_scan_2",
+   "x": 31.0,
+   "z": -15.0,
+   "rot_deg": -20,
+   "height": 1.0,
+   "note": "东北长条岩"
+  },
+  {
+   "model": "stump_scan_5",
+   "x": 9.0,
+   "z": 27.5,
+   "rot_deg": 0,
+   "height": 0.8,
+   "note": "南侧矮树桩"
+  }
+ ],
+ "note": "v3：只改近景树——6 簇（半径 18~24 米），石台外留 ≥7 米的环形通道，簇之间 6~8 米空隙；其余同 v2"
+}

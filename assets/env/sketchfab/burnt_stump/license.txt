@@ -1,0 +1,11 @@
+Model Information:
+* title:	Burnt Stump
+* source:	https://sketchfab.com/3d-models/burnt-stump-eba432d4e6084ba8b5f1b2ce66d64f23
+* author:	Adriano (https://sketchfab.com/dunathan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Burnt Stump" (https://sketchfab.com/3d-models/burnt-stump-eba432d4e6084ba8b5f1b2ce66d64f23) by Adriano (https://sketchfab.com/dunathan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

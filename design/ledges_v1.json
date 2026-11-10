@@ -1,0 +1,71 @@
+{
+ "_说明": "石台边的石头台阶：从树林走上石台的入口（mode=approach）。azimuth_deg：从 +Z（玩家出生那边）顺时针量的方位角，放在 v3 树簇之间的空当；inner_r：台阶高的一头（朝石台中心）落在离中心多少米；width：台阶宽度（模型长边）。高度自动算：最高一级和那里的石台面齐平，最低一级埋进林地。enabled=false 的不生成（W1、W2 是备用的木桩台子，用旧的 x/z/rot_deg/height 摆法）。",
+ "ledges": [
+  {
+   "id": "L1",
+   "model": "rock_formation_scan_2",
+   "mode": "approach",
+   "azimuth_deg": 65,
+   "inner_r": 10.6,
+   "width": 7.0,
+   "enabled": true,
+   "note": "东南入口（K1 簇和 D 簇之间）"
+  },
+  {
+   "id": "L2",
+   "model": "rock_formation_scan_2",
+   "mode": "approach",
+   "azimuth_deg": -65,
+   "inner_r": 10.6,
+   "width": 7.0,
+   "enabled": true,
+   "note": "西南入口（S1 簇和 W 簇之间）"
+  },
+  {
+   "id": "L3",
+   "model": "rock_formation_scan_2",
+   "mode": "approach",
+   "azimuth_deg": 108,
+   "inner_r": 10.6,
+   "width": 6.5,
+   "enabled": true,
+   "note": "东北入口（D 簇和 E 簇之间）"
+  },
+  {
+   "id": "L4",
+   "model": "rock_formation_scan_2",
+   "mode": "approach",
+   "azimuth_deg": -108,
+   "inner_r": 10.6,
+   "width": 6.5,
+   "enabled": true,
+   "note": "西北入口（W 簇和 N 簇之间）"
+  },
+  {
+   "id": "W1",
+   "model": "wooden_terrain_thing_scan",
+   "x": -3.01,
+   "z": 14.18,
+   "azimuth_deg": -12,
+   "radius": 14.5,
+   "rot_deg": 78,
+   "length": 6.0,
+   "height": 0.6,
+   "enabled": false,
+   "note": "备用：木桩护边弧形台子（她要两种都用时再打开）"
+  },
+  {
+   "id": "W2",
+   "model": "wooden_terrain_thing_scan",
+   "x": 3.01,
+   "z": 14.18,
+   "azimuth_deg": 12,
+   "radius": 14.5,
+   "rot_deg": 102,
+   "length": 6.0,
+   "height": 0.6,
+   "enabled": false,
+   "note": "备用：木桩护边弧形台子"
+  }
+ ]
+}

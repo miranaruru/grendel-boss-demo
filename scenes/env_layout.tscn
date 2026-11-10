@@ -1,0 +1,155 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://scripts/env/env_scatter.gd" id="1_0o7oh"]
+[ext_resource type="Script" path="res://scripts/env/scatter_rule.gd" id="2_c0vce"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1dypy"]
+seed = 7
+frequency = 0.06
+
+[sub_resource type="Resource" id="Resource_mm3qx"]
+script = ExtResource("2_c0vce")
+label = "边缘大石"
+scene_path = "res://assets/env/models/boulder_01/boulder_01.gltf"
+count_max = 6
+ring_min = 26.3
+ring_max = 27.6
+min_spacing = 3.0
+scale_min = 0.6
+scale_max = 1.1
+
+[sub_resource type="Resource" id="Resource_gqbp1"]
+script = ExtResource("2_c0vce")
+label = "边缘石块"
+scene_path = "res://assets/env/models/rock_07/rock_07.gltf"
+count_min = 10
+count_max = 11
+ring_min = 26.3
+ring_max = 27.6
+scale_min = 4.0
+scale_max = 7.0
+
+[sub_resource type="Resource" id="Resource_7akvs"]
+script = ExtResource("2_c0vce")
+label = "边缘碎石"
+scene_path = "res://assets/env/models/rock_09/rock_09.gltf"
+count_min = 10
+count_max = 11
+ring_min = 26.3
+ring_max = 27.6
+min_spacing = 1.6
+scale_min = 8.0
+scale_max = 13.0
+
+[sub_resource type="Resource" id="Resource_ed5wx"]
+script = ExtResource("2_c0vce")
+label = "粗倒木"
+enabled = false
+scene_path = "res://assets/env/models/dead_tree_trunk_02/dead_tree_trunk_02.gltf"
+count_min = 3
+count_max = 5
+ring_min = 19.8
+ring_max = 25.0
+min_spacing = 4.0
+clustering = 0.4
+
+[sub_resource type="Resource" id="Resource_ml3x7"]
+script = ExtResource("2_c0vce")
+label = "细倒木"
+enabled = false
+scene_path = "res://assets/env/models/dead_tree_trunk/dead_tree_trunk.gltf"
+count_min = 4
+count_max = 6
+ring_min = 19.8
+ring_max = 25.0
+min_spacing = 3.0
+clustering = 0.4
+scale_min = 1.0
+scale_max = 1.5
+
+[sub_resource type="Resource" id="Resource_gx57f"]
+script = ExtResource("2_c0vce")
+label = "树桩 A"
+enabled = false
+scene_path = "res://assets/env/models/tree_stump_01/tree_stump_01.gltf"
+count_min = 3
+count_max = 5
+ring_min = 19.8
+ring_max = 25.0
+min_spacing = 2.5
+clustering = 0.5
+scale_min = 0.9
+scale_max = 1.3
+
+[sub_resource type="Resource" id="Resource_sq85a"]
+script = ExtResource("2_c0vce")
+label = "树桩 B"
+enabled = false
+scene_path = "res://assets/env/models/tree_stump_02/tree_stump_02.gltf"
+count_min = 3
+count_max = 5
+ring_min = 19.8
+ring_max = 25.0
+min_spacing = 2.5
+clustering = 0.5
+scale_min = 0.9
+scale_max = 1.3
+
+[sub_resource type="Resource" id="Resource_d5jgr"]
+script = ExtResource("2_c0vce")
+label = "枯枝（场外）"
+enabled = false
+scene_path = "res://assets/env/models/dry_branches_medium_01/dry_branches_medium_01.gltf"
+count_min = 6
+count_max = 10
+ring_min = 19.8
+ring_max = 25.0
+min_spacing = 1.5
+clustering = 0.3
+scale_min = 1.0
+scale_max = 1.4
+
+[sub_resource type="Resource" id="Resource_nabej"]
+script = ExtResource("2_c0vce")
+label = "枯枝（场内，无碰撞）"
+enabled = false
+scene_path = "res://assets/env/models/dry_branches_medium_01/dry_branches_medium_01.gltf"
+ring_min = 0.0
+ring_max = 16.0
+ignore_avoid = true
+min_spacing = 3.0
+scale_min = 0.7
+scale_max = 1.0
+
+[sub_resource type="Resource" id="Resource_jh1mu"]
+script = ExtResource("2_c0vce")
+label = "近处枯树"
+enabled = false
+kind = 1
+count_min = 40
+count_max = 46
+ring_min = 19.5
+ring_max = 25.0
+min_spacing = 1.8
+clustering = 0.6
+scale_max = 1.3
+
+[sub_resource type="Resource" id="Resource_fr3n2"]
+script = ExtResource("2_c0vce")
+label = "远处枯树"
+enabled = false
+kind = 1
+count_min = 60
+count_max = 75
+ring_min = 25.0
+ring_max = 48.0
+min_spacing = 2.6
+clustering = 0.7
+scale_min = 0.9
+scale_max = 1.6
+
+[node name="EnvLayout" type="Node3D"]
+script = ExtResource("1_0o7oh")
+avoid_radius = 26.0
+density_noise = SubResource("FastNoiseLite_1dypy")
+rules = Array[ExtResource("2_c0vce")]([SubResource("Resource_mm3qx"), SubResource("Resource_gqbp1"), SubResource("Resource_7akvs"), SubResource("Resource_ed5wx"), SubResource("Resource_ml3x7"), SubResource("Resource_gx57f"), SubResource("Resource_sq85a"), SubResource("Resource_d5jgr"), SubResource("Resource_nabej"), SubResource("Resource_jh1mu"), SubResource("Resource_fr3n2")])
