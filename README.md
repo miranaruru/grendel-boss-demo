@@ -1,82 +1,77 @@
 # 犀渠 · 枯林之主 / Grendel · Lord of the Withered Wood
 
-一个 3D 动作 Boss 战 Demo（Godot 4.5.1，GDScript）。剑盾主角在枯林深处的巢穴里单挑食人巨兽 Boss「犀渠」。Boss 的四种招式节奏各不相同，主要输出靠弹反、完美闪避和跳跃躲招后的反击。
-
-A 3D action boss-fight demo made in Godot 4.5.1 (GDScript). A sword-and-shield hero faces Grendel, a horned man-eating beast, in his lair in the withered wood. Most of your damage comes from parries, perfect dodges and jump counters. The game supports Chinese and English (press **G** to switch).
+A 3D action boss-fight demo made in Godot 4.5.1 (GDScript). A sword-and-shield hero faces Grendel, a horned man-eating beast, in his lair in the withered wood. Each of the boss's four attacks has its own rhythm, and most of your damage comes from parries, perfect dodges and jump counters. The game supports English and Chinese (press **G** to switch).
 
 ## Agent Prompt
 
-一套让 Agent 从一句需求（比如「我想做一个类似黑魂的 boss 战」）自己设计并做出 Boss 战 demo 的 prompt：[docs/boss_fight_agent_prompt.md](docs/boss_fight_agent_prompt.md)
-
 A prompt that lets an agent design and build a boss fight demo from a one-line request (e.g. "I want to make a Dark Souls-like boss fight"): [docs/boss_fight_agent_prompt.md](docs/boss_fight_agent_prompt.md)
 
-## 运行 / How to run
+## How to run
 
-1. 安装 **Godot 4.5.1**（标准版即可，不需要 .NET 版）：<https://godotengine.org/download/archive/4.5.1-stable/>
-   其他版本没测过，4.5 以下打不开（项目用了 4.5 的特性）。
-2. 克隆仓库。大文件（模型、贴图、音频）放在 Git LFS 里，需要先装 [Git LFS](https://git-lfs.com)：
+1. Install **Godot 4.5.1** (the standard build; the .NET build isn't needed): <https://godotengine.org/download/archive/4.5.1-stable/>
+   Other versions are untested, and anything below 4.5 won't open the project (it uses 4.5 features).
+2. Clone the repo. Large files (models, textures, audio) are stored in Git LFS, so install [Git LFS](https://git-lfs.com) first:
    ```bash
    git lfs install
-   git clone <仓库地址>
+   git clone <repo URL>
    ```
-   如果克隆后模型是几百字节的文本文件，说明 LFS 没拉下来，在仓库里运行 `git lfs pull`。
-3. 打开 Godot，在项目管理器里点 **导入（Import）**，选仓库里的 `project.godot`。
-4. 第一次打开会导入所有素材，要等一会儿。导入完按 **F5** 运行（主场景是 `main.tscn`）。
+   If models show up as text files a few hundred bytes long after cloning, LFS didn't download them. Run `git lfs pull` inside the repo.
+3. Open Godot, click **Import** in the project manager, and pick `project.godot` in the repo.
+4. The first launch imports every asset, which takes a while. When it finishes, press **F5** to run (the main scene is `main.tscn`).
 
-English: install Godot 4.5.1 and Git LFS, clone the repo, import `project.godot` in the Godot project manager, wait for the first asset import to finish, then press F5.
+## Controls
 
-## 操作 / Controls
-
-| 键盘鼠标 | 手柄 | 动作 |
+| Keyboard / mouse | Gamepad | Action |
 |---|---|---|
-| WASD / 方向键 | 左摇杆 | 移动（相对镜头） |
-| 空格 | A | 跳 |
-| Shift / L | B | 翻滚（前段无敌） |
-| J / 鼠标左键 | X | 攻击（三段连击，出刀后可翻滚取消） |
-| K / 鼠标右键 | RB | 弹反；按住举盾 |
-| R | Start | 重开 |
-| G | | 切换中文 / English |
-| H | | 换手（剑盾左右对调） |
-| T | | 调试：时间往后跳 3 小时（昼夜循环） |
-| 1 / 2 / 3 / 4 | | 调试：指定 Boss 下一招 |
+| WASD / arrow keys | Left stick | Move (camera-relative) |
+| Space | A | Jump |
+| Shift / L | B | Roll (invulnerable at the start) |
+| J / left mouse | X | Attack (3-hit combo, can be cancelled into a roll) |
+| K / right mouse | RB | Parry; hold to block |
+| R | Start | Restart |
+| G | | Switch English / Chinese |
+| H | | Swap hands (sword and shield change sides) |
+| T | | Debug: skip time ahead 3 hours (day/night cycle) |
+| 1 / 2 / 3 / 4 | | Debug: choose the boss's next attack |
 
-镜头自动锁定 Boss。
+The camera faces the boss automatically.
 
-## 战斗要点
+## Combat basics
 
-| 反击 | 触发 | 效果 |
+| Counter | Trigger | Effect |
 |---|---|---|
-| 弹反 · 十字斩 | Boss「可弹反」的招式命中前一瞬按弹反 | 顿帧，Boss 硬直，主角冲上去十字斩 |
-| 瞬影斩 | 翻滚刚开始时被攻击（完美闪避） | 慢动作，此时按攻击瞬移到 Boss 背后斩击 |
-| 落雷斩 | 跳起躲过 Boss 的低身横扫 | 空中按攻击，飞向 Boss 下劈 |
+| Cross Slash | Parry just before a parryable boss attack lands | Hitstop, the boss staggers, and the hero dashes in with a cross slash |
+| Shadowstep Slash | Get attacked right as a roll starts (perfect dodge) | Slow motion; press attack to teleport behind the boss and slash |
+| Thunderfall Slash | Jump over the boss's Low Sweep | Press attack in the air to fly at the boss and strike down |
 
-| Boss 招式 | 应对 |
+| Boss attack | How to answer |
 |---|---|
-| 快速三连爪 | 可弹反，第三下故意晚 |
-| 延迟重劈 | 不可弹反，憋很久才砸，晚一点再滚 |
-| 扑击 | 可弹反 / 完美闪避 |
-| 低身横扫 | 不可弹反，跳起来躲，接落雷斩 |
+| Triple Claw Flurry | Parryable; the third claw comes deliberately late |
+| Delayed Cleave | Not parryable; held for a long time before the slam, so roll late |
+| Pounce | Parry or perfect-dodge |
+| Low Sweep | Not parryable; jump over it, then Thunderfall Slash |
 
-普通攻击打不断 Boss，但累计伤害会让它小硬直。血量低于一半进入二阶段，所有招式变快。
+Normal attacks don't interrupt the boss, but enough accumulated damage staggers it briefly. Below half health it enters phase 2 and every attack gets faster.
 
-## 目录结构
+## Project layout
 
 ```
-project.godot / main.tscn   入口场景
-scripts/                    游戏逻辑：main（入口、输入、顿帧）、player、boss、camera_rig、hud、
-                            lair_builder（Boss 巢穴场景）、arena_builder、day_night、fx、sfx、loc（中英文）
-scenes/                     环境布局场景
-assets/                     模型、动画、贴图、音频、特效（Git LFS）
-design/                     场景布局草图和数据
-tools/                      截图 / 战斗测试用的辅助场景
+project.godot / main.tscn   entry scene
+scripts/                    game logic: main (entry, input, hitstop), player, boss, camera_rig, hud,
+                            lair_builder (boss lair scene), arena_builder, day_night, fx, sfx, loc (EN/ZH text)
+scenes/                     environment layout scenes
+assets/                     models, animations, textures, audio, VFX (Git LFS)
+design/                     layout sketches and data
+docs/                       agent prompt
+tools/                      helper scenes for screenshots and combat tests
 ```
 
-## 素材来源
+## Asset credits
 
-- 主角人偶和动作：Quaternius Universal Animation Library 1 & 2（CC0）
-- Boss 模型和动作：Mixamo
-- 环境模型和贴图：Poly Haven（CC0）和 Sketchfab，见 `assets/env/CREDITS.md` 和各 Sketchfab 素材目录下的 `license.txt`
-- 音效：Kenney、Freesound（CC0），见 `assets/audio/CREDITS.md`
-- 特效：Kenney，见 `assets/vfx/CREDITS.md`
+- Hero model: Mixamo; hero animations: Quaternius Universal Animation Library 1 & 2 (CC0)
+- Boss model and animations: Mixamo
+- Environment models and textures: Poly Haven (CC0) and Sketchfab; see `assets/env/CREDITS.md` and the `license.txt` in each Sketchfab asset folder
+- Sound effects: Kenney, Freesound (CC0); see `assets/audio/CREDITS.md`
+- VFX: Kenney; see `assets/vfx/CREDITS.md`
 
-第三方素材版权归原作者所有，仅用于本 Demo。
+Third-party assets remain the property of their original authors and are used for this demo only.
