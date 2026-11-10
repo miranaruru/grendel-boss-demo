@@ -1,8 +1,8 @@
 # 犀渠 · 枯林之主 / Grendel · Lord of the Withered Wood
 
-一个 3D 动作 Boss 战 Demo（Godot 4.5.1，GDScript）。双刀主角在枯林深处的巢穴里单挑狼人 Boss「犀渠」。Boss 的四种招式节奏各不相同，主要输出靠弹反、完美闪避和跳跃躲招后的反击。
+一个 3D 动作 Boss 战 Demo（Godot 4.5.1，GDScript）。剑盾主角在枯林深处的巢穴里单挑食人巨兽 Boss「犀渠」。Boss 的四种招式节奏各不相同，主要输出靠弹反、完美闪避和跳跃躲招后的反击。
 
-A 3D action boss-fight demo made in Godot 4.5.1 (GDScript). A dual-blade hero faces the werewolf boss Grendel in his lair in the withered wood. Most of your damage comes from parries, perfect dodges and jump counters. The game supports Chinese and English (press **G** to switch).
+A 3D action boss-fight demo made in Godot 4.5.1 (GDScript). A sword-and-shield hero faces Grendel, a horned man-eating beast, in his lair in the withered wood. Most of your damage comes from parries, perfect dodges and jump counters. The game supports Chinese and English (press **G** to switch).
 
 ## Agent Prompt
 
